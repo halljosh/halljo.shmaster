@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>jo.sh's projects</title>
+    <link id = "theme" href="projects.css" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Inconsolata|Montserrat&display=swap" rel="stylesheet">
+    <link rel="icon" href="https://cdn.discordapp.com/attachments/571611238103121941/677669718555099136/toasticon.png" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+
+        const themeStylesheet = document.getElementById('theme');
+        const storedTheme = localStorage.getItem('theme');
+        if(storedTheme.includes('darksite')) {
+            themeStylesheet.href = 'darkprojects.css'; 
+        } else {
+            themeStylesheet.href = 'projects.css';
+        }
+        })
+    </script>
+</head>
+
+<body>
+    <nav>
+        <a href="http://www.halljo.sh/#mainmenu" class="back" aria-label="back to main menu">&#8592;</a>
+    </nav>
+    <img class="logoimg" src="illustratedme.png" alt="Josh Hall illustrated">
+    <h1>jo.sh's projects</h1>
+    <div class="row">
+        <div class="box1">
+            <p class="mobiletitle">Generic Corgi</p>
+            <figure>
+                <a href="http://halljo.sh/landing.html" target="_blank" rel="noopener" class="imglink"><img src="landingpreview.png" class="sitepreview"></a>
+                <figcaption><a href="http://halljo.sh/landing.html" target="_blank" rel="noopener">site</a> <a href="https://github.com/halljosh/mastersite/blob/master/landing.html">code</a></figcaption>
+            </figure>
+            <p><strong class="webtitle">Generic Corgi</strong><br><br>Generic Corgi is a product landing page I built to practice mobile-first development and to show off Bootstrap's sleek baked-in design elements.<br><br><em>Bootstrap, HTML, CSS, JS</em></p>
+        </div>
+        <div class="box2">
+            <p class="mobiletitle">Age Calculator</p>
+            <figure>
+                <a href="http://halljo.sh/agecalc.html" target="_blank" rel="noopener" class="imglink"><img src="agecalcpreview.png" class="sitepreview"></a>
+                <figcaption><a href="http://halljo.sh/agecalc.html" target="_blank" rel="noopener" class="imglink">site</a> <a href="https://github.com/halljosh/mastersite/blob/master/agecalc.html">code</a></figcaption>
+            </figure>
+            <p><strong class="webtitle">Age Calculator</strong><br><br>This is a JavaScript web app that calculates your age down to a selectable decimal point. It also can tell you your Chinese Zodiac sign.<br><br><em>JS, HTML, CSS</em></p>
+        </div> 
+    </div>
+    <div class="row">
+        <div class="box1">
+            <p class="mobiletitle">Wellness Survey</p>
+            <figure>
+                <a href="http://halljo.sh/wellnesssurvey.php" target="_blank" rel="noopener" class="imglink"><img src="surveypreview.png" class="sitepreview"></a>
+                <figcaption><a href="http://halljo.sh/wellnesssurvey.php" target="_blank" rel="noopener">site</a> <a href="https://github.com/halljosh/mastersite/blob/master/wellnesssurvey.html">code</a></figcaption>
+            </figure>
+            <p><strong class="webtitle">Wellness Survey</strong><br><br>I wanted some practice building something with secure PHP form processing, so I whipped up this creepy survey. It's actually submittable, if you want to give it a try!<br><br><em>PHP, HTML, CSS</em></p>
+        </div>
+        <div class="box2">
+            <p class="mobiletitle">Smol Meditation</p>
+            <figure>
+                <a href="http://halljo.sh/smol.html" target="_blank" rel="noopener" class="imglink"><img src="smolpreview.png" class="sitepreview"></a>
+                <figcaption><a href="http://halljo.sh/smol.html" target="_blank" rel="noopener">site</a> <a href="https://github.com/halljosh/mastersite/blob/master/smol.html">code</a></figcaption>
+            </figure>
+            <p><strong class="webtitle">Smol Meditation</strong><br><br>Smol is a timer for meditation (or anything) that features selectable animated moods, sounds, and a dynamically updated JavaScript countdown.<br><br><em>JS, CSS Animation, HTML</em></p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="box1">
+            <p class="mobiletitle">A Guide to C</p>
+            <figure>
+                <a href="http://halljo.sh/cguide.html" target="_blank" rel="noopener" class="imglink"><img src="cpreview.png" class="sitepreview"></a>
+                <figcatption><a href="http://halljo.sh/cguide.html" target="_blank" rel="noopener">site</a> <a href="https://github.com/halljosh/mastersite/blob/master/cguide.html">code</a></figcatption>
+            </figure>
+            <p><strong class="webtitle">A Guide to C</strong><br><br>I designed this page in response to FCC's <a href="https://www.freecodecamp.org/learn/responsive-web-design/responsive-web-design-projects/build-a-technical-documentation-page">technical documentation</a> challenge. I wrote all the body text, too!<br><br><em>HTML, CSS</em></p>
+        </div>
+        <div class="boxlast">
+            <p class="mobiletitle">Alan Turing Tribute</p>
+            <figure>
+                <a href="http://halljo.sh/alanturing.html" target="_blank" rel="noopener" class="imglink"><img src="turingpreview.png" class="sitepreview"></a>
+                <figcaption><a href="http://halljo.sh/alanturing.html" target="_blank" rel="noopener" class="imglink">site</a> <a href="https://github.com/halljosh/mastersite/blob/master/alanturing.html">code</a></figcaption>
+            </figure>
+            <p><strong class="webtitle">Alan Turing Tribute</strong><br><br>This is one of the first websites I ever designed in full, but I've since added a couple of React flourishes to it.<br><br><em>HTML, CSS, React</em></p>
+        </div>
+    </div>
+</body>
+
+</html>

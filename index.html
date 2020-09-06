@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>jo.sh hall</title>
+    <link id="theme" href="newsite.css" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Inconsolata|Montserrat&display=swap" rel="stylesheet">
+    <link rel="icon" href="https://cdn.discordapp.com/attachments/571611238103121941/677669718555099136/toasticon.png" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const themeStylesheet = document.getElementById('theme');
+        const storedTheme = localStorage.getItem('theme');
+        const themeToggle = document.getElementById('mode-toggle');
+        if (storedTheme.includes('newsite')) { // loads locally stored theme and button
+            themeStylesheet.href = storedTheme;
+            themeToggle.innerText = '☾';
+        } else {
+            themeStylesheet.href = storedTheme;
+            themeToggle.innerText = '☀';
+        }
+        themeToggle.addEventListener('click', () => {
+            if (themeStylesheet.href.includes('newsite') && themeToggle.innerText === '☾') {
+                themeStylesheet.href = 'darksite.css';
+                themeToggle.innerText = '☀';
+            } else {
+                themeStylesheet.href = 'newsite.css';
+                themeToggle.innerText = '☾';
+            }
+            localStorage.setItem('theme', themeStylesheet.href)
+        });
+    });
+    </script>
+</head>
+
+<body>
+    <a href="#mainmenu" class="welcome" id="modalTrigger">Welcome!</a>
+    <dialog class="modal" id="mainmenu" tabindex="-1">
+        <button class="themebutton" id="mode-toggle">☾</button>
+        <img class="mobileimg" src="illustratedme.png" alt="Josh Hall illustrated">
+        <nav>
+            <ul>
+                <li><a id="projectslink" href="http://www.halljo.sh/projects.html">Projects&nbsp;</a></li>
+                <li><a href="#about" id="modalTrigger">About&nbsp;</a></li>
+                <li><a href="#contact" id="modalTrigger">Contact&nbsp;</a></li>
+                <li><a href="#meta" id="modalTrigger">Meta&nbsp;</a></li>
+            </ul>
+        </nav>
+        <div>
+            <a href="#modalTrigger" class="close" aria-label="close main menu">&times;</a>
+            <p>Hi, I'm Josh!
+                Follow the links on the left to learn more about me and my recent projects.</p>
+            <p><img class="logoimg" src="illustratedme.png" alt="Josh Hall illustrated"></p>
+        </div>
+    </dialog>
+    <dialog class="modal" id="about" tabindex="-1">
+        <div>
+            <a href="#mainmenu" class="close" aria-label="back to main menu">&#8592;</a>
+            <img class="aboutimg" src="toastandme.jpeg" alt="Josh Hall and his corgi">
+            <p> I'm Josh, and this is <a href="https://www.instagram.com/toastcorgi" target="_blank" rel="noopener">my dog, Toast!</a> I was born and raised in Indiana, USA, but have spent time living and working in Korea, Finland, and Israel. <br><br> I have professional experience as an English language educator, and now as a front-end web developer. I enjoy hiking, puzzles, trivia, and running <a href="https://youtube.com/undeadgames" target="_blank" rel="noopener">my video game YouTube channel.</a> <br><br> Currently I'm working through my second round of the <em>#100DaysofCode</em> challenge over on <a href="https://twitter.com/undeadcoding"> my Twitter,</a> this time to learn React. Let's grab a latte (or a beer) soon!</p>
+        </div>
+    </dialog>
+    <dialog class="modal" id="contact" tabindex="-1">
+        <div class="contactbox">
+            <a href="#mainmenu" class="close" aria-label="back to main menu">&#8592;</a>
+            <p>
+                <ul class = "contactlist">
+                    <li><img class="contactimg" src="emailicon.png"><a href="mailto:joshuaandrewhall@gmail.com">joshuaandrewhall</a></li>
+                    <li><img class="contactimg" src="twittericon.png"><a href="https:twitter.com/undeadcoding">@undeadcoding</a></li>
+                    <li><img class="contactimg" src="githubicon.png"><a href="https://github.com/halljosh">halljosh</a></li>
+                    <li><img class="contactimg" src="instaicon.png"><a href="https://instagram.com/undeadinkling">@undeadinkling</a></li>
+                </ul>
+            </p>
+        </div>
+    </dialog>
+    <dialog class="modal" id="meta" tabindex="-1">
+        <div>
+            <a href="#mainmenu" class="close" aria-label="back to main menu">&#8592;</a>
+            <p>As a challenge, I designed this site using vanilla HTML and CSS, but a bit of JavaScript did end up being necessary for the night mode feature. I wrote it from scratch in Sublime Text, though these days I'm rolling with VSC.<br><br>This site is hosted on <a href="https://www.nearlyfreespeech.net/" target="_blank" rel="noopener">Nearly Free Speech,</a> which is a terrific resource for small static site developers. Shoutout to St. Helena, Ascension and Trstan da Cunha, British Overseas Territories, for the <a href="https://www.nic.sh/" target="_blank" rel="noopener">.sh</a> domain. I'm certain I'm not the only Josh in the world who's used it.<br><br>I'm currently working on ensuring the site passes the accesability standards put forth by the WCAG 2.1, so check back later for that I guess.<br><br>Oh, and the font you're looking at is a zesty, readable monospace called <a href="https://fonts.google.com/specimen/Inconsolata" target="_blank" rel="noopener">Inconsolata.</a></p>
+        </div>
+    </dialog>
+</body>
+
+</html>
