@@ -1,11 +1,8 @@
 body {
     /* initial background*/
     font-family: monospace;
-    display: -webkit-box;
     display: flex;
-    -webkit-box-align: center;
     align-items: center;
-    -webkit-box-pack: center;
     justify-content: center;
     min-height: 100vh;
     background: rgb(255, 255, 255);
@@ -23,10 +20,7 @@ body {
     width: 100%; 
     height: 100%; 
     display: flex;
-    display: -webkit-box;
-    -webkit-box-pack: center;
     justify-content: center;
-    -webkit-box-align: center;
     align-items: center;
     opacity: 1;
     visibility: hidden;
@@ -43,7 +37,6 @@ body {
 
 a.welcome {
     /*unopened menu*/
-    -webkit-box-flex: 1;
     flex: 1;
     background-color: #8e99e3;
     padding: 1.5em;
@@ -278,7 +271,7 @@ ul {
     #meta div,
     #projects div {
         min-width: 300px;
-        margin-left: -2rem;
+        margin-left: -0.5rem;
     }
 
     #meta p {
